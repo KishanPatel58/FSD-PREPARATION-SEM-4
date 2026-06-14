@@ -6,7 +6,7 @@ const Navbar = () => {
     const navigate = useNavigate()
     const location = useLocation().pathname.slice(2);
     const {dataset} = useContext(Context)
-    const [currentch, setCurrentch] = useState("7")
+    const [currentch, setCurrentch] = useState("")
     const handleChange = (e) => {
         const targetpage = Number(e.target.value);
         if(targetpage >= 356){
@@ -24,7 +24,7 @@ const Navbar = () => {
         <nav className="w-full h-15 flex items-center justify-between fixed !z-[1000] bg-black top-0 left-0 !p-[5px_25px]">
             <h1 onClick={()=>navigate("/")} className="text-2xl flex items-center justify-center gap-3 cursor-pointer">
                 PB Solution
-                <span>(CH - {currentch})</span>
+                {currentch && <span>(CH - {currentch})</span>}
             </h1>
             <select name="question" value={location} className="border-0 outline-3 outline-transparent rounded-lg focus:outline-purple-500 bg-purple-900 !p-[6px_25px]" id="" onChange={handleChange}>
                 <option value="--">-- Select --</option>
