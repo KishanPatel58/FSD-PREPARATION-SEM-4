@@ -22,7 +22,7 @@ const Navbar = () => {
     }
     return (
         <nav className="w-full h-15 flex items-center justify-between fixed !z-[1000] bg-black top-0 left-0 !p-[5px_25px]">
-            <h1 onClick={()=>navigate("/")} className="text-2xl flex items-center justify-center gap-3 cursor-pointer">
+            <h1 onClick={()=>navigate("/")} className="text-sm sm:text-2xl flex items-center justify-center gap-3 cursor-pointer">
                 PB Solution
                 {currentch && <span>(CH - {currentch})</span>}
             </h1>
